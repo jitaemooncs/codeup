@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+int main(void)
+{
+    long number;
+    
+    scanf("%ld", &number);
+    printf("%ld\n", number + 1);
+}
