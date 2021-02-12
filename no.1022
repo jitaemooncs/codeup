@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main(void)
+{
+    // Considering null character...?
+    char sentence[2001];
+    
+    // Helps getting sentence
+    fgets(sentence, 2000, stdin);
+    
+    scanf("%s", sentence);
+    printf("%s\n", sentence);
+}
