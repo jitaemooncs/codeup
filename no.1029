@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+int main(void)
+{
+    double number;
+    
+    scanf("%lf", &number);
+    printf("%.11lf\n", number);
+}
