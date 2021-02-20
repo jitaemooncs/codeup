@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main(void)
+{
+    int object_num, number_add = 1, sum = 0;
+    
+    scanf("%d", &object_num);
+    
+    
+    while (1)
+    {
+        sum += number_add;
+        
+        if (sum >= object_num)
+        {
+            break;
+        }
+        
+        number_add++;
+        
+    }
+    
+    printf("%d\n", number_add);
+}
