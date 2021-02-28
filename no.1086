@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <math.h>
+
+int main(void)
+{
+    int w, h, b;
+    
+    scanf("%d %d %d", &w, &h, &b);
+    
+    // Calculate the bits
+    long total_bit = w * h * b;
+    
+    // Change to megabytes
+    float megabytes = total_bit / pow(2, 23);
+    
+    printf("%.2f MB\n", megabytes);
+}
