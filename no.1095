@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main(void)
+{
+    int number;
+    scanf("%d", &number);
+    
+    int students[number];
+    
+    for (int i = 0; i < number; i++)
+    {
+        scanf("%d", &students[i]);
+    }
+    
+    int min = 100;
+    
+    for (int i = 0; i < number; i++)
+    {
+        if (students[i] < min)
+        {
+            min = students[i];
+        }
+    }
+    
+    printf("%d\n", min);
+}
