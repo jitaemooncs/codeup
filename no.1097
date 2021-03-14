@@ -1,0 +1,58 @@
+#include <stdio.h>
+
+int main(void)
+{
+    int tablet[19][19];
+    
+    for (int i = 0; i < 19; i++)
+    {
+        for (int j = 0; j < 19; j++)
+        {
+            scanf("%d", &tablet[i][j]);
+        }
+    }
+    
+    
+    // Prompt number of coordinates and coordinates themselves
+    int n, x, y;
+    
+    scanf("%d", &n);
+    
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%d %d", &x, &y);
+        
+        for (int j = 0; j < 19; j++)
+        {
+            if (tablet[x - 1][j] == 0)
+            {
+                tablet[x - 1][j] = 1;
+            }
+            else
+            {
+                tablet[x - 1][j] = 0;
+            }
+        }
+        
+        for (int k = 0; k < 19; k++)
+        {
+            if (tablet[k][y - 1] == 0)
+            {
+                tablet[k][y - 1] = 1;
+            }
+            else
+            {
+                tablet[k][y - 1] = 0;
+            }
+        }
+    }
+    
+    for (int i = 0; i < 19; i++)
+    {
+        for (int j = 0; j < 19; j++)
+        {
+            printf("%d ", tablet[i][j]);
+        }
+        printf("\n");
+    }
+}
